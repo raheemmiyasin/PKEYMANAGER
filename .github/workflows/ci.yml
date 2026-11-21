@@ -21,7 +21,7 @@ jobs:
         # macOS is the supported platform; Linux keeps the code portable.
         os: [macos-latest, ubuntu-latest]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt, clippy
@@ -34,7 +34,7 @@ jobs:
     name: MSRV (1.88)
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       # Toolchain given as an input (not `@1.88`) so Dependabot doesn't "upgrade" the MSRV.
       - uses: dtolnay/rust-toolchain@master
         with:
