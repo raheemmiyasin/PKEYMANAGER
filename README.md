@@ -1,5 +1,9 @@
 # PKEY MANAGER
 
+[![CI](https://github.com/raheemmiyasin/PKEYMANAGER/actions/workflows/ci.yml/badge.svg)](https://github.com/raheemmiyasin/PKEYMANAGER/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Rust 1.88+](https://img.shields.io/badge/rust-1.88%2B-orange.svg)
+
 A terminal UI for the SSH keys in `~/.ssh` on macOS, written in Rust with
 [ratatui](https://ratatui.rs) (crossterm backend).
 
@@ -86,8 +90,18 @@ Requirements: Rust 1.88 or newer (`rustup update` if older). Install with
 `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh` or
 `brew install rustup && rustup-init`.
 
+Install straight from GitHub:
+
 ```sh
-cd ~/CODES/PKEYMANAGER
+cargo install --git https://github.com/raheemmiyasin/PKEYMANAGER
+pkeymanager
+```
+
+Or build from a clone:
+
+```sh
+git clone https://github.com/raheemmiyasin/PKEYMANAGER.git
+cd PKEYMANAGER
 cargo run                 # debug build and run
 cargo test                # unit tests (one test uses ssh-keygen in a temp dir)
 cargo build --release     # optimised binary at target/release/pkeymanager
@@ -127,3 +141,20 @@ PKEYMANAGER_SSH_DIR=/tmp/ssh-copy cargo run
 
 Limits of this version: `Include` lines in `~/.ssh/config` are not followed,
 and private keys without a matching `.pub` file are not listed.
+
+## Maintainer
+
+- **PandAi** ([@raheemmiyasin](https://github.com/raheemmiyasin)), creator and maintainer
+
+See [CONTRIBUTORS.md](CONTRIBUTORS.md) for everyone who has helped.
+
+## Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md),
+especially the safety rules for handling keys. By taking part you agree to the
+[Code of Conduct](CODE_OF_CONDUCT.md). Found a security problem? Please report
+it privately; see [SECURITY.md](SECURITY.md).
+
+## License
+
+[MIT](LICENSE)

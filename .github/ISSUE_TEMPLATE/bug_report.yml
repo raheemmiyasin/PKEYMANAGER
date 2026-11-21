@@ -1,0 +1,42 @@
+name: Bug report
+description: Something doesn't work as described
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste private keys, passphrases, or full `~/.ssh/config` files.**
+        Public keys and fingerprints are fine. For security issues, see SECURITY.md instead.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what you saw instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Select key `id_ed25519`
+        2. Press `a`
+        3. ...
+  - type: input
+    id: version
+    attributes:
+      label: pkeymanager version or commit
+      placeholder: 0.1.0 / c25f9e1
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS and terminal
+      placeholder: macOS 15.2, iTerm2 3.5
+    validations:
+      required: true
+  - type: input
+    id: ssh
+    attributes:
+      label: Output of `ssh -V` and `which ssh-add`

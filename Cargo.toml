@@ -5,6 +5,13 @@ edition = "2024"
 rust-version = "1.88"
 description = "Terminal UI for managing SSH public keys on macOS"
 license = "MIT"
+authors = ["PandAi"]
+repository = "https://github.com/raheemmiyasin/PKEYMANAGER"
+homepage = "https://github.com/raheemmiyasin/PKEYMANAGER"
+readme = "README.md"
+keywords = ["ssh", "tui", "ssh-keys", "ssh-agent", "macos"]
+categories = ["command-line-utilities"]
+exclude = [".github/"]
 
 [dependencies]
 # ratatui draws the UI; it re-exports crossterm (terminal backend) as `ratatui::crossterm`,
